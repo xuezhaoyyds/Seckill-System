@@ -1,5 +1,6 @@
 package com.xz.login.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.xz.login.model.User;
 import org.apache.ibatis.annotations.Param;
 
@@ -13,7 +14,7 @@ import java.util.List;
  * @author makejava
  * @since 2025-12-28 23:21:10
  */
-public interface UserMapper {
+public interface UserMapper extends BaseMapper<User> {
 
     /**
      * 通过ID查询单条数据
