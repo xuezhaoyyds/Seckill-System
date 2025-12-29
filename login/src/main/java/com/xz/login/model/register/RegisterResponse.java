@@ -28,7 +28,7 @@ public class RegisterResponse {
         private String nickname;
         private String email;
         private String phone;
-        private Integer userType;
+        private String userType;
 
     }
 }

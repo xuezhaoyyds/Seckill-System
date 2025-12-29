@@ -1,12 +1,10 @@
 package com.xz.login.model;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -22,7 +20,7 @@ public class User implements Serializable {
     /**
      * 用户ID
      */
-    @TableId
+    @TableId(type= IdType.ASSIGN_ID)
     private Long id;
     /**
      * 用户名
@@ -47,19 +45,15 @@ public class User implements Serializable {
     /**
      * 状态：0-禁用，1-启用，2-锁定
      */
-    private Integer status;
+    private String status;
     /**
      * 用户类型：1-普通用户，2-管理员，3-超级管理员
      */
-    private Integer userType;
+    private String userType;
     /**
      * 最后登录时间
      */
-    private Date lastLoginTime;
-    /**
-     * 最后登录IP
-     */
-    private String lastLoginIp;
+    private LocalDateTime lastLoginTime;
     /**
      * 连续登录失败次数
      */
@@ -67,11 +61,11 @@ public class User implements Serializable {
     /**
      * 锁定直到时间
      */
-    private Date lockUntilTime;
+    private LocalDateTime lockUntilTime;
     /**
      * 密码最后修改时间
      */
-    private Date passwordChangedTime;
+    private LocalDateTime passwordChangedTime;
     /**
      * 昵称
      */

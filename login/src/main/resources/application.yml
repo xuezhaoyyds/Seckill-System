@@ -13,5 +13,4 @@ spring:
         file-extension: yaml
   config:
     import: nacos:login.yaml?group=DEFAULT_GROUP&refresh=true
-server:
-  port: 8083
+

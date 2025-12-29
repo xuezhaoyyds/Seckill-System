@@ -26,9 +26,8 @@ public class AuthController {
      * @return
      */
     @PostMapping("/login")
-    public LoginResponse login(@Valid @RequestBody LoginRequest loginRequest,
-                               HttpServletRequest request) {
-        return authService.login(loginRequest, request);
+    public LoginResponse login(@Valid @RequestBody LoginRequest loginRequest) {
+        return authService.login(loginRequest);
     }
 
     /**

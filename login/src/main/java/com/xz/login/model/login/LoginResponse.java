@@ -31,7 +31,7 @@ public class LoginResponse {
         private String nickname;
         private String email;
         private String avatar;
-        private Integer userType;
+        private String userType;
         
 
     }
