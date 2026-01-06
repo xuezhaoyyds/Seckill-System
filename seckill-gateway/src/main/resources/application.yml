@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: seckill-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: 3d22dd63-78fe-4891-b2ba-db8540d793b9
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: 3d22dd63-78fe-4891-b2ba-db8540d793b9
+        group: DEFAULT_GROUP
+        file-extension: yaml
+  config:
+    import: nacos:gateway.yaml?group=DEFAULT_GROUP&refresh=true
+
